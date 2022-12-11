@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Orqaga qaytish</a>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <p>O'chirishga ishonchingiz komilmi? <b>"{{task}}"</b> </p>
+        <input class="button" type="submit" value="O'chirish" />
+    </form>
+</div>
+
+
+
+{% endblock content %}
