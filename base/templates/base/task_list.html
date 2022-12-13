@@ -4,7 +4,7 @@
 <div class="header-bar">
     <div>
         <h1>Assalomu alaykum {{request.user|title}}</h1>
-        <h3 style="margin:0">Sizda <i>{{count}}</i> ta tugallanmagan vazifa bor{{ count|pluralize:"s" }}</h3>
+        <h3 style="margin:0">Sizda <i>{{count}}</i> ta tugallanmagan vazifa bor{{ count|pluralize:"" }}</h3>
     </div>
 
     {% if request.user.is_authenticated %}
@@ -49,8 +49,8 @@
 
     {% empty %}
     <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
-        <h3>Yangi vazifalar yaratilmaydi.</h3>
-        <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">New task</a> ! </h3>
+        <h3>Hali vazifalar yaratilmadi.</h3>
+        <h3>Yangi vazifalar qo'shish uchun <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">Bosing</a> ! </h3>
     </div>
     {% endfor %}
 </div>
